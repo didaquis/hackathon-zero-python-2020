@@ -3,10 +3,12 @@
 ![title](./assets-docs/title.png)
 
 ## Requirements
-Install Python 3.8.
+Install `python3`  
+Install `pip3`
 
 ## Resources
 Docs of Python 3.8 https://docs.python.org/3.8/  
+Docs of pip https://pip.pypa.io/en/stable/  
 
 ## baby steps
 
