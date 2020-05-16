@@ -6,3 +6,6 @@ class Cat:
 	
 	def getName(self):
 		return self.name
+
+	def talk(self):
+		return 'miau'

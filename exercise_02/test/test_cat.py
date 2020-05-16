@@ -17,5 +17,11 @@ class TestSum(unittest.TestCase):
 		myCat = Cat(name_of_cat)
 		self.assertEqual(myCat.getName(), name_of_cat ,'Should return the name of cat')
 
+	def test_if_cat_can_emit_some_sound(self):
+		name_of_cat = 'Fido'
+		myCat = Cat(name_of_cat)
+		self.assertEqual(myCat.talk(), 'miau' ,'Should return: miau')
+
+
 if __name__ == '__main__':
 	unittest.main()
