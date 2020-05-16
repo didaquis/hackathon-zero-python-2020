@@ -34,3 +34,9 @@ Or run a Python file:
 ```bash
 python3 baby-steps.py
 ```
+
+## Install requirements with pip
+
+```bash
+pip install -r requirements.txt
+```
