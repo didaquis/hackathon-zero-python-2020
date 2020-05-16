@@ -9,6 +9,7 @@ Install `pip3`
 ## Resources
 Docs of Python 3.8 https://docs.python.org/3.8/  
 Docs of pip https://pip.pypa.io/en/stable/  
+Docs of unittest https://docs.python.org/3/library/unittest.html  
 
 ## baby steps
 
