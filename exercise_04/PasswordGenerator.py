@@ -1,3 +1,4 @@
 class PasswordGenerator:
-	def __init__():
-		return
+
+	def new_password(self):
+		return 'foofoo78'

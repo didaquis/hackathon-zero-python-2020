@@ -7,7 +7,7 @@ import unittest
 
 from exercise_02.Cat import Cat
 
-class TestSum(unittest.TestCase):
+class TestCat(unittest.TestCase):
 
 	def test_cat_should_be_callable(self):
 		self.assertTrue(callable(Cat), 'Should be callable')
