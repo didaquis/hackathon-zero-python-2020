@@ -4,7 +4,7 @@
 
 ## Requirements
 Install `python3`  
-Install `pip3`
+Ensure you have installed `pip3`
 
 ## Resources
 Docs of Python 3.8 https://docs.python.org/3.8/  
@@ -15,7 +15,7 @@ Docs of unittest https://docs.python.org/3/library/unittest.html
 
 Run in the terminal: 
 ```bash
-python 3
+python3
 ```
 And then:
 ```python
@@ -35,7 +35,7 @@ Or run a Python file:
 python3 baby-steps.py
 ```
 
-## Install requirements with pip
+## Install requirements of aplications with pip
 
 ```bash
 pip install -r your-folder/requirements.txt
