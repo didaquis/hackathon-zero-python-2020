@@ -9,8 +9,10 @@ Ensure you have a "__init__.py" file on that directory.
 All files must be name with this pattern "test_foo.py".
 
 
-Other option:
+Other options:
 	python3 -m unittest unittest_example/test/*.py
+	python3 -m unittest unittest_example/test/test_sum.py
+	python3 -m unittest unittest_example/test/test_*.py
 '''
 
 import unittest
