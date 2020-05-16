@@ -1,6 +1,7 @@
 '''
 For run all test execute this ("unittest_example" is the name of target folder): 
 	python3 -m unittest discover unittest_example/
+	python3 -m unittest discover -s unittest_example
 
 All test must be in directory called "test".
 
