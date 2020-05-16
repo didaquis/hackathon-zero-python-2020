@@ -43,8 +43,11 @@ def echo_handler(update, context):
 	response = message[5:] # Removing first five characters from the message
 	update.message.reply_text(response)
 
+
 def suma_handler(update, context):
-	suma = int(context.args[0]) + int(context.args[1])
-	update.message.reply_text('El resultado es: {}'.format(suma))
+	sum = int(context.args[0]) + int(context.args[1])
+	result = str(sum)
+	update.message.reply_text('El resultado es: ' + result)
+
 
 main()
