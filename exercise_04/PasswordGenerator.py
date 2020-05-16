@@ -1,4 +1,6 @@
-class PasswordGenerator:
+import secrets
 
+class PasswordGenerator:
+	_nbytes = 16
 	def new_password(self):
-		return 'fo0fooJj'
+		return secrets.token_hex(self._nbytes)
