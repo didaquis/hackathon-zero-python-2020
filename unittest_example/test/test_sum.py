@@ -1,12 +1,16 @@
 '''
 For run all test execute this ("unittest_example" is the name of target folder): 
-	python -m unittest discover unittest_example/ 
+	python3 -m unittest discover unittest_example/
 
 All test must be in directory called "test".
 
 Ensure you have a "__init__.py" file on that directory.
 
 All files must be name with this pattern "test_foo.py".
+
+
+Other option:
+	python3 -m unittest unittest_example/test/*.py
 '''
 
 import unittest
