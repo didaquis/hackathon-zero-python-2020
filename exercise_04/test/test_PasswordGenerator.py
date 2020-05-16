@@ -24,5 +24,10 @@ class TestPasswordGenerator(unittest.TestCase):
 		password = generator.new_password()
 		self.assertTrue(re.search('[A-Z]', password), 'Should contain a letter in uppercase')
 
+	def test_should_contain_at_least_one_number(self):
+		generator = PasswordGenerator()
+		password = generator.new_password()
+		self.assertTrue(re.search('[0-9]', password), 'Should contain a number')
+
 if __name__ == '__main__':
 	unittest.main()
