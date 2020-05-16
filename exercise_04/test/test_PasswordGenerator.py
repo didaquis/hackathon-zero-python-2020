@@ -17,7 +17,7 @@ class TestPasswordGenerator(unittest.TestCase):
 		generator = PasswordGenerator()
 		password = generator.new_password()
 		expected_length = 32
-		self.assertGreaterEqual(len(password), expected_length, 'Should have at least {} characters'.format(expected_length))
+		self.assertGreaterEqual(len(password), expected_length, f'Should have at least {expected_length} characters')
 
 	def test_should_contain_at_least_one_letter_lowercase(self):
 		generator = PasswordGenerator()
@@ -43,7 +43,7 @@ class TestPasswordGenerator(unittest.TestCase):
 
 			number_of_tokens_to_generate -= 1
 		
-		self.assertEqual(len(list_of_tokens), number_of_expected_tokens, 'Should generate {} unique tokens'.format(number_of_expected_tokens))
+		self.assertEqual(len(list_of_tokens), number_of_expected_tokens, f'Should generate {number_of_expected_tokens} unique tokens')
 
 if __name__ == '__main__':
 	unittest.main()
