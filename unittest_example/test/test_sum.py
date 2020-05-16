@@ -25,8 +25,14 @@ class TestSum(unittest.TestCase):
 	def test_sum_should_be_callable(self): # Name of test should be unique
 		self.assertTrue(callable(sum), "Should be callable")
 
-	def test_sum(self):
+	def test_sum_should_return_zero_if_not_receive_integers(self):
+		self.assertEqual(sum(), 0, "Should be 0")
+
+	def test_sum_two_integers(self):
 		self.assertEqual(sum(1,2), 3, "Should be 3")
+
+	def test_sum_any_number_of_integers(self):
+		self.assertEqual(sum(1,2,3,4,2,1), 13, "Should be 13")
 
 if __name__ == '__main__':
 	unittest.main()
