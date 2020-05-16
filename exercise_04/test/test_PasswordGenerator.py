@@ -33,7 +33,7 @@ class TestPasswordGenerator(unittest.TestCase):
 		generator = PasswordGenerator()
 		list_of_tokens = []
 		
-		number_of_tokens_to_generate = 999
+		number_of_tokens_to_generate = 9999
 		number_of_expected_tokens = number_of_tokens_to_generate
 		while number_of_tokens_to_generate > 0:
 			password = generator.new_password()
@@ -43,7 +43,7 @@ class TestPasswordGenerator(unittest.TestCase):
 
 			number_of_tokens_to_generate -= 1
 		
-		self.assertEqual(len(list_of_tokens), number_of_expected_tokens, 'Should generate 999 unique tokens')
+		self.assertEqual(len(list_of_tokens), number_of_expected_tokens, 'Should generate {} unique tokens'.format(number_of_expected_tokens))
 
 if __name__ == '__main__':
 	unittest.main()
