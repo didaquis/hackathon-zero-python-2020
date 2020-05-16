@@ -9,7 +9,7 @@ You must create files "bot_token" and "bot_username" and provide real data. Use 
 Docs: https://python-telegram-bot.org
 '''
 import logging
-from telegram.ext import Updater, CommandHandler
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
 # Activar logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -31,6 +31,8 @@ def main(): # This is a best practice
 	updater.dispatcher.add_handler(CommandHandler('eco', echo_handler))
 	updater.dispatcher.add_handler(CommandHandler('suma', suma_handler)) # If user writes "/suma 2 3", this bot reponse "El resultado es: 5"
 
+	updater.dispatcher.add_handler(MessageHandler(Filters.text, detect_words_handler)) # Read messages writed by user and trigger handler if detect some specific words
+
 	updater.dispatcher.add_error_handler(error_handler) # Add handler for errors
 
 	updater.start_polling() # Esperamos a pedir notificaciones de telegram
@@ -41,6 +43,12 @@ def main(): # This is a best practice
 def error_handler(update, context):
 	'''Send errors to console'''
 	logger.warning('Update "%s" caused error "%s"', update.message, context.error)
+
+
+def detect_words_handler(update, context):
+	''' Detect word "hola" and send a message '''
+	if(update.message.text.upper().find('HOLA') > 0):
+		update.message.reply_text('Hola amigo 😉')
 
 
 def start_handler(update, context):
